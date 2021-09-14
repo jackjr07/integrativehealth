@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'landing.apps.LandingConfig',
     'healthlit.apps.HealthlitConfig',
+    'bridge.apps.BridgeConfig',
 ]
 
 MIDDLEWARE = [
