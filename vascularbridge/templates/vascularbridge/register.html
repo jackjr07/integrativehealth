@@ -1,0 +1,22 @@
+{% extends 'landing/base2.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<br>
+{% if title %}
+<div class="container">
+    <div class="row text-center">
+        <h4>{{title}}</h4>
+    </div>
+</div>
+{% endif %}
+<div class="container">
+<div class="row">
+    <div class="col-6">
+<form method="POST">
+    {% csrf_token %}
+    {% crispy form %}
+</form>
+    </div>
+</div>
+</div>
+{% endblock %}
