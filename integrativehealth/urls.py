@@ -22,6 +22,7 @@ urlpatterns = [
     path('', include('landing.urls')),
     path('healthlit/', include('healthlit.urls')),
     path('bridge/', include('bridge.urls')),
+    path('vascularbridge/', include('vascularbridge.urls')),
     path('admin/', admin.site.urls),
 ]
 

@@ -1,0 +1,34 @@
+{% extends 'landing/base2.html' %}
+{% block content %}
+<div class="container-fluid flex-grow-1 d-flex">
+    <div class="row flex-fill flex-column flex-sm-row">
+        <div class="col-sm-3 col-md-2 sidebar flex-shrink-1 bg-dark pt-3" id="Navbar">
+            <ul class="nav flex-sm-column">
+                <li class="active"><a class="nav-link" href="/">Registeration</a></li>
+                <li><a class="nav-link" href="{% url 'vascularBridgeRegister' %}">Pre Operative</a></li>
+                <li><a class="nav-link" href="../chat">Pre Admission</a></li>
+                <li><a class="nav-link" href="../rss">Admission</a></li>
+                <li><a class="nav-link" href="../rss">Peri Operative</a></li>
+                <li><a class="nav-link" href="../rss">Post Operative</a></li>
+                <li><a class="nav-link" href="../rss">CLI Surveillance</a></li>
+            </ul>
+            <hr>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 flex-grow-1 py-3">
+            {% block forms %}
+            <h5>Welcome to Vascular Bridge Program</h5>
+            
+            <p class="lead">This program provide you an assistant between your provider and your health.</p>
+
+            <p>Program information</p>
+            <p>
+            asymmetrical lo-fi. Dreamcatcher street art Carles, stumptown gluten-free Kickstarter artisan 
+            Wes Anderson wolf pug. Godard sustainable you probably haven't heard of them, vegan farm-to-table Williamsburg slow-carb 
+            readymade disrupt deep v. Meggings seitan Wes Anderson semiotics, cliche American Apparel whatever. Helvetica cray plaid, vegan brunch Banksy 
+            leggings +1 direct trade. Wayfarers codeply PBR selfies. Banh mi McSweeney's Shoreditch selfies, 
+            forage fingerstache food truck occupy YOLO Pitchfork fixie iPhone fanny pack art party Portland.</p>
+            {% endblock %}
+        </div>
+    </div>
+</div>
+{% endblock %}
