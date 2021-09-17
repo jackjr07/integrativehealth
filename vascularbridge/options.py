@@ -1,3 +1,13 @@
+""" limbIndex """
+
+LIMBSIDE = (
+        ('left', 'Left'), 
+        ('right', 'Right'), 
+        ('both', 'Both'),
+        )
+
+
+""" Registeration """
 STAFFLIST = (
         ('napaporn', 'Napaporn'),
         ('ratana', 'Ratana'),
