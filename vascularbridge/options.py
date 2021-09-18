@@ -1,10 +1,26 @@
-""" limbIndex """
+""" Commom """
+YN = (
+    ('yes', 'Yes'),
+    ('no', 'No'),
+)
 
-LIMBSIDE = (
-        ('left', 'Left'), 
-        ('right', 'Right'), 
-        ('both', 'Both'),
-        )
+COMPLETED = (
+    ('completed', 'Completed'),
+    ('unknown', 'Unknown'),
+)
+
+LEVELS = (
+    ( 1, '1'),
+    ( 2, '2'),
+    ( 3, '3'),
+)
+
+""" ======================================"""
+
+""" HELP TEXT """
+WOUNDHELPTEXT = "[0 - No Ulcer(Ischemic rest pain, no wound)] \n [1 - Small Shallow ulcer on distal leg or foot without gangrenous] \n [2 - Deeper ulcer with exposed bone, joint, or tendon, or gangrenous changes limited to digits] \n [3 - Extensive deep ulcer, full thickness heel ulcer, +- calcaneal involvement +- extensive gangrene]"
+
+
 
 
 """ Registeration """
