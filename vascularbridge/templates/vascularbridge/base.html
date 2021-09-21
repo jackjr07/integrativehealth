@@ -1,4 +1,7 @@
 {% extends 'landing/base2.html' %}
+{% block head %}
+<script src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+{% endblock %}
 {% block content %}
 <div class="container-fluid flex-grow-1 d-flex">
     <div class="row flex-fill flex-column flex-sm-row">
@@ -31,4 +34,6 @@
         </div>
     </div>
 </div>
+{% endblock %}
+{% block js %}
 {% endblock %}

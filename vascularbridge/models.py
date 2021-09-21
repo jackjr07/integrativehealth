@@ -69,6 +69,3 @@ class vascularBridgeRegister(models.Model):
     note = models.TextField()
 
 
-
-
-

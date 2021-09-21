@@ -22,6 +22,7 @@ WOUNDHELPTEXT = "[0 - No Ulcer(Ischemic rest pain, no wound)] \n [1 - Small Shal
 
 
 
+""" ======================================"""
 
 """ Registeration """
 STAFFLIST = (
@@ -55,4 +56,12 @@ QL_ACTIVITIES=()
 QL_SELFCOMFORTABLE=()
 QL_ANXIETY=()
 
+
+""" ======================================"""
+
+""" Date Picker """
+MONTHS = (
+        ('1', 'Jan'),
+        ('2', 'Feb'),
+)
 
