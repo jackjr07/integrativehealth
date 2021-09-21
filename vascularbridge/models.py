@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from .options import *
+import datetime
 
 class limbIndexSym(models.Model):
     limbSymptoms = models.CharField(max_length=100)
@@ -21,11 +22,17 @@ class limbIndexDiagnosis(models.Model):
     def __str__(self):
         return self.limbDiagnosis
 
-class limbPlansurgical(models.Model):
+class limbSurgicalPlan(models.Model):
     surgical = models.CharField(max_length=30)
 
     def __str__(self):
         return self.surgical
+
+class limbNonSurgicalPlan(models.Model):
+    nonSurgical = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.nonSurgical
 
 
 
@@ -55,6 +62,12 @@ class vascularBridgeRegister(models.Model):
     ischaemiaScore = models.CharField(max_length=5, choices=LEVELS)
     footinfectionScore = models.CharField(max_length=5, choices=LEVELS)
     planSurgical = models.CharField(max_length=10)
+    planNonSurgical = models.CharField(max_length=10)
+    OrPlanDate = models.DateField(blank=True, null=True)
+    preOpAppt = models.BooleanField()
+    preOpApptdate = models.DateTimeField(blank=True, null=True)
+    note = models.TextField()
+
 
 
 

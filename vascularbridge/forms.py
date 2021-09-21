@@ -1,6 +1,9 @@
 from django import forms
-from .models import vascularBridgeRegister, limbIndexSym, limbIndexRutherford, limbIndexDiagnosis, limbPlansurgical
+from .models import vascularBridgeRegister, limbIndexSym, limbIndexRutherford, limbIndexDiagnosis, limbSurgicalPlan, limbNonSurgicalPlan
 from .options import *
+
+class DateInput(forms.DateInput):
+    input_type = 'date'
 
 class PostRegister(forms.ModelForm):
     leftLimbIndex = forms.ModelMultipleChoiceField(queryset=limbIndexSym.objects.all(),widget=forms.CheckboxSelectMultiple)
@@ -9,9 +12,13 @@ class PostRegister(forms.ModelForm):
     rightLimbIndex = forms.ModelMultipleChoiceField(queryset=limbIndexSym.objects.all(),widget=forms.CheckboxSelectMultiple)
     rightLimbRutherford = forms.ModelMultipleChoiceField(queryset=limbIndexRutherford.objects.all(), widget=forms.CheckboxSelectMultiple)
     rightLimbDiagnosis = forms.ModelMultipleChoiceField(queryset=limbIndexDiagnosis.objects.all(), widget=forms.CheckboxSelectMultiple)
-
-    planSurgical = forms.ModelMultipleChoiceField(queryset=limbPlansurgical.objects.all())
+    planSurgical = forms.ModelMultipleChoiceField(queryset=limbSurgicalPlan.objects.all())
+    planNonSurgical = forms.ModelMultipleChoiceField(queryset=limbNonSurgicalPlan.objects.all())
      
     class Meta:
         model = vascularBridgeRegister
         fields = '__all__'
+        widgets = {
+            'OrPlanDate' : forms.DateInput(),
+            'preOpAppt':forms.NullBooleanSelect(),
+        }
