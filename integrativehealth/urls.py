@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
+from users import views as userViews
 
 urlpatterns = [
     path('', include('landing.urls')),
@@ -24,6 +25,8 @@ urlpatterns = [
     path('bridge/', include('bridge.urls')),
     path('vascularbridge/', include('vascularbridge.urls')),
     path('admin/', admin.site.urls),
+    path('register/', userViews.register, name='register'),
+    path('login/', userViews.login, name='login'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

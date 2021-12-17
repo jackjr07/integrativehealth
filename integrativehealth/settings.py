@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'bootstrap_datepicker_plus',
+    'users.apps.UsersConfig',
     'landing.apps.LandingConfig',
     'healthlit.apps.HealthlitConfig',
     'bridge.apps.BridgeConfig',
@@ -142,3 +143,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 BOOTSTRAP5= {
     'include_jquery':True,
 }
+
