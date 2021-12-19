@@ -3,10 +3,10 @@
 <section class="py-5 text-center container">
     <div class="row py-lg-5">
         <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light">Health Literacy</h1>
-            <p class="lead text-muted">We focus on provide facts about the diseases, and conditions to people to improve their health</p>
+            <h1 class="fw-light">ความรู้ด้านสุขภาพ</h1>
+            <p class="lead text-muted">เราให้ความสำคัญกับการให้ข้อเท็จจริงเกี่ยวกับโรคและเงื่อนไขต่างๆ เพื่อปรับปรุงสุขภาพของผู้คน</p>
             <p>
-                <a href="#" class="btn btn-primary my-2">Learn more about the program</a>
+                <a href="#" class="btn btn-primary my-2">อ่านเพิ่มเติมเกี่ยวกับโปรแกรม</a>
             </p>
         </div>
     </div>
@@ -15,7 +15,6 @@
 <div class="album py-5 bg-light">
     <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
         {% for list in lists %}
         <div class="col d-flex align-items-start">
             <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
@@ -23,8 +22,10 @@
             </div>
             <div>
                 <h4>{{ list.programName }}</h4>
-                <hr>
-                <a href="#" class="btn btn-primary"> Read More</a>
+                <form method="POST">
+                    {% csrf_token %}
+                    <button class="btn btn-primary" type="submit" name="eduPage" value="{{list.programUrl}}">อ่านเพิ่มเติม</button>
+                </form>
             </div>
         </div>
         {% endfor %}

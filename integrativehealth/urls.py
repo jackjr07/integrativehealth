@@ -19,6 +19,10 @@ from django.conf.urls.static import static
 from django.conf import settings
 from users import views as userViews
 
+admin.site.site_header = "Integrative Health Admin Portal"
+admin.site.site_title = "Siriraj - Integrative Health Admin"
+admin.site.index_title = "Welcome to Integrative Health Admin Portal"
+
 urlpatterns = [
     path('', include('landing.urls')),
     path('healthlit/', include('healthlit.urls')),
